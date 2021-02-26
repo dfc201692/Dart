@@ -1,0 +1,29 @@
+agesPrint(ages, promedio) {
+  print("La edad mayor es: " + ages.last.toString());
+  print("La edad menor es: " + ages.first.toString());
+  print("El promedio de edad es: $promedio");
+}
+
+agesPromedio(ages) {
+  int sum = 0;
+  for(int age in ages) {
+    sum += age;
+  }
+  return sum;
+}
+
+agesSort(ages) {
+  ages.sort();
+  return ages;
+}
+
+edades () {
+  var ages = [33, 11, 27, 40, 22];
+  ages = agesSort(ages);
+  var promedio = agesPromedio(ages);
+  agesPrint(ages, promedio);
+}
+  
+void main() {
+  edades ();
+}
